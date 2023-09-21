@@ -1,17 +1,22 @@
-# 1-1 Implement a recursive function to calculate the factorial of a given number.
+# Define the Player class
+class Player:
+    def play(self):
+        print("The player is playing cricket")
 
-def fact_rec(n):
+# Define the Batsman class that inherits from Player
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting")
 
- if n==0 or n==1:
+# Define the Bowler class that inherits from Player
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling")
 
-   return 1
+# Create objects of the Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
 
- else:
-
-   return n*fact_rec(n-1)
-
-number = int(input("Enter a value :"))
-
-res = fact_rec (number)
-
-print("The factorial of{} is {}.||".format(number, res))
+# Call the play() method for each object
+batsman.play()
+bowler.play()
